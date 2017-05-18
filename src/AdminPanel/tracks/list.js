@@ -27,7 +27,7 @@ class Tracks extends Component {
       beforeSend: function(xhr){xhr.setRequestHeader('Authorization', "Bearer "+ _this.auth.get_access_token());},
       success: function(data){
         _this.setState({tracks: data})
-        // console.log(data);
+        console.log(data);
       },
       error: function(err){
         console.log(err);
@@ -47,6 +47,7 @@ class Tracks extends Component {
             <tr>
               <th>Name</th>
               <th>Branch</th>
+              <th>Students</th>
               <th>Actions</th>
             </tr>
           </thead>

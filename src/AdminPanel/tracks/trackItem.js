@@ -10,6 +10,7 @@ class TrackItem extends Component {
       <tr>
         <td>{this.props.track.name}</td>
         <td>{this.props.track.branch.name}</td>
+        <td>{this.props.track.users.map(user=> user.name).join()}</td>
         <td><a onClick={this.deleteTrack} href="#" className="btn btn-danger btn-xs">Delete</a> <Link to={"/tracks/edit/"+this.props.track.id} className="btn btn-primary btn-xs" >Edit</Link></td>
       </tr>
     );
